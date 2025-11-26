@@ -1,16 +1,6 @@
 
 # Learnable B-Spline Activations for Mitigating Catastrophic Forgetting
 
-This repository contains the implementation of my undergraduate thesis:
-
-**Title**:  
-**"Employing Learnable B-Spline Activation Functions to Address Catastrophic Forgetting in Neural Networks"**  
-**Author**: Mahdi Razi Gandomani  
-**Supervisors**: Dr. Ali Mohades  
-**Institution**: Amirkabir University of Technology
-**Date**: April 2025
-
----
 
 ## 📚 Project Overview
 
@@ -110,20 +100,5 @@ For running and visualizing the experiments:
 - Simply run the cells in `plot_mnist_results.ipynb` for the **Permuted MNIST** forgetting analysis.
 - Simply run the cells in `toy_regression.ipynb` for the **Peaks Regression** fitting experiment.
 
-
----
-
-
-## 📬 Contact
-
-For any questions or suggestions, please reach out to:
-
-- **Email**: [mahdi.razi@aut.ac.ir]
-
----
-
-## ⭐ Acknowledgments
-
-Special thanks to my supervisors **Dr. Ali Mohades** for their invaluable guidance and support throughout this project.
 
 ---
