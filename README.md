@@ -1,7 +1,3 @@
-
-# Learnable B-Spline Activations for Mitigating Catastrophic Forgetting
-
-
 ## 📚 Project Overview
 
 **Catastrophic forgetting** remains a major challenge in continual learning systems, where neural networks forget previously learned tasks when adapting to new ones.  
