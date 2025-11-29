@@ -162,9 +162,9 @@ This table quantifies the final results:
 - All methods show similar plasticity (~0.97-0.99), confirming the difference is in **retention, not learning capacity**
 
 
-<div align="center">
+<p align="center">
   <img src="results/visualizations/average_accuracy_comparison.png" alt="average_accuracy_comparison">
-</div>
+</p>
 
 
 
@@ -190,9 +190,9 @@ Analysis of 3, 5, 7, 10, 15 and 25 control points reveals:
 - **Accuracy increases with control point count**: From 0.45 (3 points) to 0.81 (15 points) and 0.84 (25 points)
 - **Forgetting decreases with more control points**: From 0.56 (3 points) to 0.17 (17 points) and 0.14 (25 points)
 
-<div align="center">
+<p align="center">
   <img src="results/viz_cp/metrics_comparison.png" alt="metrics_comparison">
-</div>
+</p>
 
 More control points provide greater expressiveness but add parameters and significant runtime overhead. This aligns with approximation theory: B-splines with more control points can approximate more complex functions while maintaining local control [4,5]. These heatmaps highlight this trade-off by visually confirming that larger control point counts preserve accuracy across all tasks.
 
@@ -209,9 +209,9 @@ Comparing degrees 1 through 5:
 - **Degree 1 (linear) performs best!**: Accuracy 0.77, Forgetting 0.21
 - **Higher degrees show diminishing returns**: Degree 3 (accuracy 0.62, forgetting 0.37) and degree 5 (accuracy 0.56, forgetting 0.47) perform progressively worse
 
-<div align="center">
+<p align="center">
   <img src="results/viz_degree/metrics_comparison.png" alt="metrics_comparison">
-</div>
+</p>
 
 
 It seems lower-degree splines provide sufficient expressiveness while maintaining simpler, more stable optimization landscapes. Linear piecewise B-splines provide sufficient flexibility without overfitting and are efficient in this continual learning setting.
@@ -223,9 +223,9 @@ Testing bounds of (-1,1), (-2,2), (-3,3), and (-5,5):
 - **Intermediate bounds (-1,1) and (-2,2) perform best**
 - **Wider bounds reduce performance**:
 
-<div align="center">
+<p align="center">
   <img src="results/viz_bounds/metrics_comparison.png" alt="metrics_comparison">
-</div>
+</p>
 
 #### 3.2.4 Initialization Strategy
 
@@ -234,9 +234,9 @@ Comparing random, identity, ReLU, and leaky ReLU initialization:
 - **Identity initialization shows competitive performance**: Accuracy 0.51, forgetting 0.48
 - **Random initialization underperforms**: Accuracy 0.61, forgetting 0.39
 
-<div align="center">
+<p align="center">
   <img src="results/viz_init/metrics_comparison.png" alt="metrics_comparison">
-</div>
+</p>
 
 ReLU and leaky ReLU initialization achieve the best performance with high accuracy and low forgetting, while random initialization underperforms. Identity initialization is moderately effective, showing competitive but lower accuracy and higher forgetting.
 
@@ -337,9 +337,9 @@ This work demonstrates that learnable B-spline activation functions offer a prac
 
 The local support property of B-splines appears to be key to their success, enabling learning in one region of the input space to minimally interfere with previously learned regions.
 
-<div align="center">
+<p align="center">
   <img src="results/visualizations/performance_summary.png" alt="performance_summary">
-</div>
+</p>
 
 
 
