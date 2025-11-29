@@ -141,12 +141,20 @@ In Permuted MNIST benchmark, B-spline activations consistently outperformed othe
   <img src="results/visualizations/metrics_comparison.png" alt="metrics_comparison">
 </div> -->
 
-<figure align="center">
+<!-- <figure align="center">
   <img src="results/visualizations/metrics_comparison.png" alt="metrics_comparison">
   <figcaption>
     B-spline achieves the highest average accuracy (0.75) and lowest forgetting (0.24), outperforming ReLU (0.64, 0.37), Tanh (0.63, 0.63), GELU (0.53, 0.53), and PReLU (0.58, 0.58). It also demonstrates the best backward transfer (BWT: -0.24) among all methods.
   </figcaption>
+</figure> -->
+
+<figure align="center">
+  <img src="results/visualizations/metrics_comparison.png" alt="metrics_comparison">
+  <figcaption style="font-size:0.8em; color:gray;">
+    B-spline achieves the highest average accuracy (0.75) and lowest forgetting (0.24), outperforming ReLU (0.64, 0.37), Tanh (0.63, 0.63), GELU (0.53, 0.53), and PReLU (0.58, 0.58). It also demonstrates the best backward transfer (BWT: -0.24) among all methods.
+  </figcaption>
 </figure>
+
 
 - B-spline achieves the highest average accuracy (0.75) with ReLU X it with (0.64)
 - B-spline shows the lowest forgetting (0.24) compared to ReLU (0.37), Tanh (0.63), GELU (0.53), and PReLU (0.58)
