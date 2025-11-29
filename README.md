@@ -259,14 +259,9 @@ This experiment directly validates the locality hypothesis: B-splines can learn 
 
 Our results can be explained through the lens of existing continual learning theory and the mathematical properties of B-splines:
 
-**1. Locality and Reduced Representational Overlap**
-
 One key mechanism contributing to catastrophic forgetting is the overlap in representations when networks use shared weights to store information [2]. B-splines provide a mechanism to reduce this overlap through their local support property. As established in the literature, B-spline neural networks can store information locally, meaning learning in one part of the input space minimally affects the rest [5].
 
 When a B-spline activation learns to respond to inputs from a new task, only the control points in the relevant region of the input space need to be updated. Control points outside this region remain largely unchanged, preserving the network's response to previous tasks. 
-
-
-**2. Flexibility Without Excessive Parameterization**
 
 Studies on learnable activation functions have shown they allow for "a reduction of the overall size of the network for a given accuracy" due to their flexibility [5]. Our shared B-spline approach balances this flexibility with parameter efficiency: each layer has only `num_control_points` additional parameters (e.g., 15 parameters for default configuration), compared to KANs which would require this many parameters per edge.
 
