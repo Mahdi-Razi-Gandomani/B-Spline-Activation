@@ -5,7 +5,7 @@
 This repository contains the implementation of my undergraduate thesis:
 
 **Title**:  
-**"Employing Learnable B-Spline Activation Functions to Address Catastrophic Forgetting in Neural Networks"**  
+**"Addressing Catastrophic Forgetting in Neural Networks Using Learnable B-Spline Activation Functions"**  
 **Author**: Mahdi Razi Gandomani  
 **Supervisors**: Dr. Ali Mohades  
 **Institution**: Amirkabir University of Technology
