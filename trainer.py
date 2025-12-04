@@ -132,9 +132,6 @@ class Trainer:
             self.acc_matrix[task_id, : len(accs)] = accs
 
 
-            print(train_stats['time_seconds'])
-
-
         results = self.final_metrics()
 
         return results
@@ -172,6 +169,7 @@ def run_experiment(cfg, seed, vb=True):
     if 'permuted_mnist' in cfg['dataset'].lower():
         in_size = 784
         out_size = 10
+        hidden_sizes = [256, 256]
         model_type = 'mlp'
     elif 'cifar10' in cfg['dataset'].lower():
         in_size = 3
@@ -180,7 +178,7 @@ def run_experiment(cfg, seed, vb=True):
     else:
         raise ValueError()
 
-    model = create_model(model_type, in_size, out_size, cfg['activation'], hidden_sizes=cfg.get('hidden_sizes', [256, 256]), act_cfg=cfg.get('act_cfg', {}))
+    model = create_model(model_type, in_size, out_size, cfg['activation'], hidden_sizes=hidden_sizes, act_cfg=cfg.get('act_cfg', {}))
 
 
     use_compile = cfg.get('use_compile', False)
