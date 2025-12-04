@@ -85,18 +85,13 @@ where $x_i$ are uniformly spaced points in $[{start}, {end}]$.
 - Output layer: 10 classes
 - Shared B-spline activation per layer
 
-<!-- **Convolutional Neural Network (CNN)**: For Split CIFAR-10, consisting of:
-- Convolutional layers: [32, 64, 128] channels with 3×3 kernels
-- Batch normalization and max pooling after each convolutional block
-- Fully connected layers: [256] neurons
-- Output layer: 2 classes per task
-- Shared B-spline activation per layer -->
+
 
 ### 2.3 Continual Learning Benchmarks
 
 **Permuted MNIST** : A sequence of 10 tasks where each task applies a fixed random permutation to the pixels of MNIST images. This benchmark tests domain-incremental learning where the input distribution changes but the task structure remains constant.
 
-<!-- **Split CIFAR-10**: A sequence of 5 binary classification tasks, each distinguishing between 2 of the 10 CIFAR-10 classes. This tests class-incremental learning. -->
+
 
 ### 2.4 Evaluation Metrics
 
@@ -290,7 +285,7 @@ With training hyperparameters (chosen with a simple random grid search):
 ```
 .
 ├── activations.py      # B-spline activation implementation
-├── datasets.py         # Permuted MNIST and Split CIFAR-10 loaders
+├── datasets.py         # Permuted MNIST loaders
 ├── models.py          # MLP and CNN architectures
 ├── trainer.py         # Training loop and continual learning protocol
 ├── metrics.py         # CL metrics
@@ -318,9 +313,6 @@ python3 runner.py --exp ablations --dataset permuted_mnist --num_seeds 5
 python3 runner.py --exp regression --num_peaks 7 --num_seeds 3
 ```
 
-### Compare on Split CIFAR-10:
-```bash
-python3 runner.py --exp compare --dataset split_cifar10 --num_seeds 3
 ```
 
 
