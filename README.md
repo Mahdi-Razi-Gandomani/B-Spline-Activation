@@ -171,9 +171,19 @@ The B-spline activation (purple line) demonstrates **substantially better retent
 
 
 
+### 3.2 Continual Regression Experiment
+
+In the continual regression task with 7 sequential peaks, B-splines demonstrate remarkable ability to retain previously learned functions while adapting to new ones. Unlike ReLU activations which exhibit severe catastrophic forgetting (completely losing earlier peaks), B-spline activations maintain knowledge of all previously learned peaks throughout training.
+
+This experiment directly validates the locality hypothesis: B-splines can learn new regions of the function space (new peaks) without catastrophically overwriting existing learned regions (previous peaks).
+
+![Regression fitting](results/viz_reg/relu_continual_regression_results.png)
+![Regression fitting](results/viz_reg/bspline_continual_regression_results.png)
 
 
-### 3.2 Ablation Studies
+
+
+### 3.3 Ablation Studies
 
 We conduct ablation studies to systematically evaluate the impact of key hyperparameters on model performance.
 
@@ -232,19 +242,6 @@ Comparing random, identity, ReLU, and leaky ReLU initialization:
 </p>
 
 ReLU and leaky ReLU initialization achieve the best performance with high accuracy and low forgetting, while random initialization underperforms. Identity initialization is moderately effective, showing competitive but lower accuracy and higher forgetting.
-
-
-### 3.3 Continual Regression Experiment
-
-In the continual regression task with 7 sequential peaks, B-splines demonstrate remarkable ability to retain previously learned functions while adapting to new ones. Unlike ReLU activations which exhibit severe catastrophic forgetting (completely losing earlier peaks), B-spline activations maintain knowledge of all previously learned peaks throughout training.
-
-This experiment directly validates the locality hypothesis: B-splines can learn new regions of the function space (new peaks) without catastrophically overwriting existing learned regions (previous peaks).
-
-![Regression fitting](results/viz_reg/relu_continual_regression_results.png)
-![Regression fitting](results/viz_reg/bspline_continual_regression_results.png)
-
-
-
 
 ---
 
